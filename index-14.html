@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Спектрум и всякое">
+<meta name="viewport" content="width=device-width">
+<title>INK 9 (14 страница со старыми записями) | INK 9</title>
+<link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#b19a71">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="ru" href="rss.xml">
+<link rel="canonical" href="https://ink9.ru/index-14.html">
+<link rel="prev" href="index-15.html" type="text/html">
+<link rel="next" href="index-13.html" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="assets/css/ink9.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container px-0 px-md-3">
+        <div class="row flex-nowrap header">
+            <img src="assets/images/banner-md.jpg">
+</div>
+        <div class="row" id="contentView">
+            <div class="col-12 col-md-3 order-0 order-md-0 bg-light p-3 menucontainer">
+    <div class="align-items-sm-start px-0 px-md-3 pt-0 pt-md-3 text-white menubar">
+        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-sm-start" id="menu">
+<li class="nav-item">
+            <a href="index.html" class="nav-link align-middle px-0">
+                <i class="fs-4 bi-house"></i> <span>Блог</span>
+            </a>
+        </li>
+        <li class="nav-item level2">
+            <a href="archive.html" class="nav-link align-middle px-0">
+                <i class="fs-6 bi-calendar2-date"></i> <span> По годам</span>
+            </a>
+        </li>
+        <li class="nav-item level2">
+            <a href="categories/index.html" class="nav-link align-middle px-0">
+                <i class="fs-6 bi-tags"></i> <span> По темам</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="library/" class="nav-link align-middle px-0">
+                <i class="fs-4 bi-book"></i> <span>Библиотека</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="about/" class="nav-link align-middle px-0">
+                <i class="fs-4 bi-file-person"></i> <span>О сайте</span>
+            </a>
+        </li>
+
+        </ul>
+</div>
+</div>
+
+            <div class="col-12 col-md-9 order-0 order-md-1 bg-white p-3">
+    
+    
+<div class="postindex">
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2025-02-18/" class="u-url">Запуск ELKS на NES</a></h1>
+        <div class="metadata">
+            <p class="dateline">
+                <time class="published dt-published" datetime="2025-02-18T19:13:15+05:00" itemprop="datePublished" title="2025-02-18 19:13">2025-02-18 19:13</time></p>
+                <p class="commentline">    
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <p>Какая же красота всё-таки. Автор проекта, decrazyo, пару лет назад уже делал видео про "запуск линукса на NES", но там в процессе разработки цель сузилась до "разработать что-нибудь, что выглядит как Linux". И он сделал LUnix (<a class="reference external" href="https://github.com/decrazyo/lng-fds">https://github.com/decrazyo/lng-fds</a>). Но видать идея не отпустила, и его новая попытка уже более глобальная.</p>
+<p>Цитируемое сообщение (оригинал в <a class="reference external" href="https://t.me/yellow_room_nerdcave/1180">Telegram Сычевальня в Желтой Комнате</a>)</p>
+<blockquote>
+<p>NES86
+Внезапный эмулятор i8086 и минимального набора периферии для NES. Главная задача - запустить облегченное ядро
+Linux (ELKS) для примитивного оборудования.</p>
+<p>Напомню, Intel 8086 - 16-битный процессор, а в основе NES клон MOS 6502 - 8-битного процессора. В общем, практическое   применение тут крайне сомнительное, но очень занятное упражнение.</p>
+<p>Для работы ROM использует возможный, но не существующий физически маппер, из-за чего запуск возможен не на всех   эмуляторах и флеш-картриджах. Впрочем, как минимум малину тут встраивать не стали 😅</p>
+<p>Кстати, есть, например, проект по запуску Linux на Commodore 64, который также основан на процессоре 6502.
+По факту это эмулятор RISC-V, который уже запускает полноценное ядро, речь о портировании не идёт.
+Linux там даже работает, правда загрузка на железе занимает около недели.</p>
+<p>#новости
+#эмуляция
+#nes
+#разное</p>
+</blockquote>
+<a class="reference external image-reference" href="images/photo_82@18-02-2025_19-13-15.jpg">
+<img alt="/images/photo_82@18-02-2025_19-13-15.thumbnail.jpg" src="images/photo_82@18-02-2025_19-13-15.thumbnail.jpg"></a>
+    </div>
+    </article><hr>
+<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2025-02-03/" class="u-url">Black Cat Linux 6.02</a></h1>
+        <div class="metadata">
+            <p class="dateline">
+                <time class="published dt-published" datetime="2025-02-03T00:21:50+05:00" itemprop="datePublished" title="2025-02-03 00:21">2025-02-03 00:21</time></p>
+                <p class="commentline">    
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <p>Непостоянная рубрика "Находки на барахолке". Сегодня вот ходил, купил Black Cat Linux 6.02 — официальный, с мануалом — за 10 рублей. 1999 год.</p>
+<p>Даже интересно его поставить на какой-нибудь компьютер. Там ведь вообще ничего из коробки не работает, любой чих нужно настраивать вручную. Мой первый установленный линукс был более поздний, Debian Potato (вроде 2000го года), и то там, скажем, чтобы графику запустить, нужно было в конфиг иксов вписать допустимый частотный диапазон монитора и всякое вот такое. Спасала только куча HOWTO, заботливо положенных создателями диска рядом с дистрибутивом. А тут, получается, всё должно быть еще более хардкорно.</p>
+<a class="reference external image-reference" href="images/photo_81@03-02-2025_00-21-50.jpg">
+<img alt="/images/photo_81@03-02-2025_00-21-50.thumbnail.jpg" src="images/photo_81@03-02-2025_00-21-50.thumbnail.jpg"></a>
+    </div>
+    </article><hr>
+<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2025-01-08/" class="u-url">Плата Sprinter-97</a></h1>
+        <div class="metadata">
+            <p class="dateline">
+                <time class="published dt-published" datetime="2025-01-08T23:56:26+05:00" itemprop="datePublished" title="2025-01-08 23:56">2025-01-08 23:56</time></p>
+                <p class="commentline">    
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <p>Попала в руки чистая плата Sprinter-97, отсканировал для истории.</p>
+<p>Это тот самый зверский спектрум с изменяемой на лету конфигурацией, который должен был похоронить Профи с АТМ, и даже конкурировать с некоторыми PC-совместимыми. Сейчас ценители его возродили, производят новоделы и пишут софт. Но насколько я знаю, современные версии ведут свою родословную от Sprinter-2000, исходники которого разработчики выложили в открытый доступ. А вот Sprinter-97 штука более редкая.</p>
+<p>Недавно плата всплыла на аукционе Сотбис и была куплена анонимным коллекционером, а по пути проехала и через меня.</p>
+    </div>
+    </article><hr>
+<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2024-12-31/" class="u-url">С новым годом!</a></h1>
+        <div class="metadata">
+            <p class="dateline">
+                <time class="published dt-published" datetime="2024-12-31T20:36:22+05:00" itemprop="datePublished" title="2024-12-31 20:36">2024-12-31 20:36</time></p>
+                <p class="commentline">    
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <p>С наступающим, друзья! У меня год получился крайне неплодотворный в онлайне, зато очень насыщенный в оффлайне — например, я теперь кандидат физ.-мат. наук. В следующем году, надеюсь, все перевернется и я выпаду уже из реальной жизни, чтобы доделать все начатое тут.</p>
+<p>Ну что же, RANDOMIZE USR 2025!</p>
+<p>PS И вот написал я предыдущую строчку, и стало жутко интересно, а что эта программа делает-то? Понятно, что запускает какой-то код в ПЗУ по адресу 2025, но что там? Сходил в эмулятор, проверил. Комп не виснет, не сбрасывается, пытается читать порт #FE. Выглядит как загрузка с кассеты, и действительно, подсовываем TAP-ку, и идут полосы. Но в конце всегда R Tape Loading Error. Что происходит-то?</p>
+<p>Попробовал другие адреса, чуть поменьше. Интересно, что до 2022 у нас несколько "лет" стабильно сразу же был R Tape Loading Error, даже без попытки что-то грузить. А вот с 2022 началась какая-то непонятная хрень и длится до сих пор.</p>
+<p>Пришлось расчехлить отладчик и заодно читать "Полный дизассемблер ПЗУ". В общем, адрес 2025 у нас находится внутри процедуры VERIFY (это загрузка блока с ленты и сравнение его с тем, что находится в памяти). Но раз мы прыгаем туда как попало в середину процедуры, то и в регистрах у нас мусор. В итоге верификация идет для куска кода, начинающегося по адресу 2D2B (то есть грузим мы в ПЗУ, что не имеет смысла) и длиной 23778 байт. И вот тут мне стало интересно, а можно ли программу, состоящую из одной строки "RANDOMIZE USR 2025" заставить делать что-то если не полезное, то хотя бы симпатичное. Сразу приходит на ум, что раз блок мы грузим огроменный (почти 24 килобайта!), то хоть начало у него и в ПЗУ, конец-то будет в ОЗУ. И по пути мы перезапишем и экран, и переменные бейсика, и этим можно воспользоваться. Поэтому просим нейросеть сгенерить нам черно-белую елку, конвертим в 6912, кладем внутрь блока длиной 23778 точно в то место, которое загрузится в экран, и готово! Результат на картинке, тапка в комменте 🌲 Внутри лоадер из одного нашего randomize + беззаголовочный блок нужной длины.</p>
+<p>Поэкспериментировал бы еще, но уже пора садиться за салаты. Так что постскриптум закончился так же неожиданно, как и начался 😀 Удачи вам, увидимся в новом году!</p>
+<a class="reference external image-reference" href="images/photo_80@31-12-2024_20-36-22.jpg">
+<img alt="/images/photo_80@31-12-2024_20-36-22.thumbnail.jpg" src="images/photo_80@31-12-2024_20-36-22.thumbnail.jpg"></a>
+    </div>
+    </article><hr>
+<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2024-10-29/" class="u-url">Реверс ULA</a></h1>
+        <div class="metadata">
+            <p class="dateline">
+                <time class="published dt-published" datetime="2024-10-29T14:05:56+05:00" itemprop="datePublished" title="2024-10-29 14:05">2024-10-29 14:05</time></p>
+                <p class="commentline">    
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <p>Мы вот сидим, а там ZX ULA отреверсили и в верилог сконвертировали. Теперь при желании можно взять микросхему программируемой логики и получить практически точную копию основного чипа оригинального ZX Spectrum 48.</p>
+<p>Не знаю, как на вас, а на меня хардварный реверс производит впечатление волшебства. По фото спиленного кристалла восстановить его логические блоки — тут и масштаб фронта работы гигантский, и порог вхождения запредельный. То, что люди этим занимаются как хобби, вызывает бесконечное уважение.</p>
+<p><a class="reference external" href="https://github.com/emu-russia/ula">https://github.com/emu-russia/ula</a></p>
+    </div>
+    </article><hr>
+<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2024-07-17/" class="u-url">Новый видос! Кворум-128+</a></h1>
+        <div class="metadata">
+            <p class="dateline">
+                <time class="published dt-published" datetime="2024-07-17T13:09:58+05:00" itemprop="datePublished" title="2024-07-17 13:09">2024-07-17 13:09</time></p>
+                <p class="commentline">    
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <p>Новый видос! Работа над этим видео растянулась на год, но теперь оно готово! Кворум 128+, полученный прошлым летом от Евгения — обозреваем, перебираем и добавляем VGA-выход на штатное место.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=Zw3_NE1rc9k">https://www.youtube.com/watch?v=Zw3_NE1rc9k</a></p>
+<div class="youtube-video">
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Zw3_NE1rc9k?rel=0&amp;wmode=transparent" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+</div>
+    </div>
+    </article><hr>
+<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2024-07-11/" class="u-url">Взлом DS</a></h1>
+        <div class="metadata">
+            <p class="dateline">
+                <time class="published dt-published" datetime="2024-07-11T13:55:34+05:00" itemprop="datePublished" title="2024-07-11 13:55">2024-07-11 13:55</time></p>
+                <p class="commentline">    
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <p>Смотрите, как круто: мало того, что подробная история, так человек еще и достал все девайсы для взлома Nintendo DS, начиная с самых древних, и показал как они работают</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=5cCFGqxEyXE">https://www.youtube.com/watch?v=5cCFGqxEyXE</a></p>
+<div class="youtube-video">
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/5cCFGqxEyXE?rel=0&amp;wmode=transparent" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+</div>
+    </div>
+    </article><hr>
+<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2024-06-02/" class="u-url">Кассеты с барахолки</a></h1>
+        <div class="metadata">
+            <p class="dateline">
+                <time class="published dt-published" datetime="2024-06-02T21:02:27+05:00" itemprop="datePublished" title="2024-06-02 21:02">2024-06-02 21:02</time></p>
+                <p class="commentline">    
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <p>Обычно на локальной барахолке нет ничего спектрумского, но сегодня прям удачный день. У двух разных продавцов нарыл немного кассет. Бэтмен от студии "Проспект", даже вкладка с описанием на месте.</p>
+<a class="reference external image-reference" href="images/photo_78@02-06-2024_21-02-27.jpg">
+<img alt="/images/photo_78@02-06-2024_21-02-27.thumbnail.jpg" src="images/photo_78@02-06-2024_21-02-27.thumbnail.jpg"></a>
+<a class="reference external image-reference" href="images/photo_79@02-06-2024_21-02-27.jpg">
+<img alt="/images/photo_79@02-06-2024_21-02-27.thumbnail.jpg" src="images/photo_79@02-06-2024_21-02-27.thumbnail.jpg"></a>
+    </div>
+    </article><hr>
+<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2024-02-08/" class="u-url">SDK для нокл</a></h1>
+        <div class="metadata">
+            <p class="dateline">
+                <time class="published dt-published" datetime="2024-02-08T23:01:19+05:00" itemprop="datePublished" title="2024-02-08 23:01">2024-02-08 23:01</time></p>
+                <p class="commentline">    
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <p>Ого, оказывается, что для китайфонов 15-летней давности ("ноклы" с телевизорами и иже с ними) утекло SDK, и там прямо интересные возможности открываются</p>
+<p>Цитируемое сообщение (оригинал в <a class="reference external" href="https://t.me/monobogdann/400">Telegram Клуб фанатов балдежа</a>)</p>
+<blockquote>
+<p>Вышла новая статья о написании нативных приложений на C для дешевых китайских кнопочных телефонов!</p>
+<p><a class="reference external" href="https://habr.com/ru/companies/timeweb/articles/791072/">https://habr.com/ru/companies/timeweb/articles/791072/</a></p>
+<p><a class="reference external" href="https://pikabu.ru/story/na_pomoyku_nikak_net_pishem_nativnyie_prilozheniya_dlya_deshevyikh_kitayskikh_telefonov_11109908">https://pikabu.ru/story/na_pomoyku_nikak_net_pishem_nativnyie_prilozheniya_dlya_deshevyikh_kitayskikh_telefonov_11109908</a></p>
+</blockquote>
+<a class="reference external image-reference" href="images/photo_77@08-02-2024_23-01-19.jpg">
+<img alt="/images/photo_77@08-02-2024_23-01-19.thumbnail.jpg" src="images/photo_77@08-02-2024_23-01-19.thumbnail.jpg"></a>
+    </div>
+    </article><hr>
+<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2024-01-30/" class="u-url">Мануал к Magic-04</a></h1>
+        <div class="metadata">
+            <p class="dateline">
+                <time class="published dt-published" datetime="2024-01-30T01:52:46+05:00" itemprop="datePublished" title="2024-01-30 01:52">2024-01-30 01:52</time></p>
+                <p class="commentline">    
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <p>Отсканировал мануал к Магику-04. Довольно редкий клон Спектрума, в отличие от очень распространеного Магика-05, вышедшего позже. Вообще-то правильно он должен произноситься как Мэджик (именно так написано на БМК в еще более последующем Магике-06), но я уж как привык.</p>
+<p><a class="reference external" href="https://disk.yandex.ru/d/WU4mIBSRuGvRdw">https://disk.yandex.ru/d/WU4mIBSRuGvRdw</a></p>
+    </div>
+    </article><hr>
+</div>
+        <nav class="postindexpager"><ul class="pager">
+<li class="previous">
+                <a href="index-15.html" rel="prev">Новые записи</a>
+            </li>
+            <li class="next">
+                <a href="index-13.html" rel="next">Старые записи</a>
+            </li>
+        </ul></nav>
+</div>
+        </div>
+    </div>
+                <script src="assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#contentView', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+    </script>
+</body>
+</html>

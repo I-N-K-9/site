@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Компилятор Си для 8080 и Цветные линии от Алексея Морозова | INK 9</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#b19a71">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="ru" href="../../rss.xml">
+<link rel="canonical" href="https://ink9.ru/posts/2025-07-25/">
+<!--[if lt IE 9]><script src="../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><link rel="prev" href="../2025-07-23/" title="Оззи" type="text/html">
+<link rel="next" href="../2025-08-03/" title="Новый видос! ZX Spectrum Next" type="text/html">
+<meta property="og:site_name" content="INK 9">
+<meta property="og:title" content="Компилятор Си для 8080 и Цветные линии от Алексея Морозова">
+<meta property="og:url" content="https://ink9.ru/posts/2025-07-25/">
+<meta property="og:description" content='Кстати, то, что я на третьем месте в дефолтной таблице в лёхиных "Цветных линиях" — это одна из важнейших строк в моём резюме 😄 Релиз под каждую платформу смотрю, и каждый раз приятно.
+А компилятор оч'>
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2025-07-25T13:29:39+05:00">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="../../assets/css/ink9.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container px-0 px-md-3">
+        <div class="row flex-nowrap header">
+            <img src="../../assets/images/banner-md.jpg">
+</div>
+        <div class="row" id="contentView">
+            <div class="col-12 col-md-3 order-0 order-md-0 bg-light p-3 menucontainer">
+    <div class="align-items-sm-start px-0 px-md-3 pt-0 pt-md-3 text-white menubar">
+        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-sm-start" id="menu">
+<li class="nav-item">
+            <a href="../../index.html" class="nav-link align-middle px-0">
+                <i class="fs-4 bi-house"></i> <span>Блог</span>
+            </a>
+        </li>
+        <li class="nav-item level2">
+            <a href="../../archive.html" class="nav-link align-middle px-0">
+                <i class="fs-6 bi-calendar2-date"></i> <span> По годам</span>
+            </a>
+        </li>
+        <li class="nav-item level2">
+            <a href="../../categories/index.html" class="nav-link align-middle px-0">
+                <i class="fs-6 bi-tags"></i> <span> По темам</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="../../library/" class="nav-link align-middle px-0">
+                <i class="fs-4 bi-book"></i> <span>Библиотека</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="../../about/" class="nav-link align-middle px-0">
+                <i class="fs-4 bi-file-person"></i> <span>О сайте</span>
+            </a>
+        </li>
+
+        </ul>
+</div>
+</div>
+
+            <div class="col-12 col-md-9 order-0 order-md-1 bg-white p-3">
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Компилятор Си для 8080 и Цветные линии от Алексея Морозова</a></h1>
+
+        <div class="metadata">
+            <p class="dateline">
+                <a href="." rel="bookmark">
+                <time class="published dt-published" datetime="2025-07-25T13:29:39+05:00" itemprop="datePublished" title="2025-07-25 13:29">2025-07-25 13:29</time></a>
+            </p>
+                <p class="commentline">    
+
+            </p>
+<p>
+                
+            </p>
+        </div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <p>Кстати, то, что я на третьем месте в дефолтной таблице в лёхиных "Цветных линиях" — это одна из важнейших строк в моём резюме 😄 Релиз под каждую платформу смотрю, и каждый раз приятно.
+А компилятор очень интересный. Вообще, беда с Си компиляторами на 8080/z80</p>
+<a class="reference external image-reference" href="../../images/photo_95@25-07-2025_13-29-18.jpg">
+<img alt="/images/photo_95@25-07-2025_13-29-18.thumbnail.jpg" src="../../images/photo_95@25-07-2025_13-29-18.thumbnail.jpg"></a>
+<p>Цитируемое сообщение (оригинал в <a class="reference external" href="https://t.me/AlemorfHobby/358">Telegram "Алексей Морозов - Хобби и ретрокомпьютеры"</a>)</p>
+<blockquote>
+<p>Привет Народ!  Я закончил прибирать исходники компилятора Си для процессора 8080. А точнее, мне надоело это делать. Все  иходники выложены сюда.</p>
+<p><a class="reference external" href="https://github.com/alemorf/c8080">https://github.com/alemorf/c8080</a></p>
+<p>Доделывать компилятор буду, когда буду им сам пользоваться.</p>
+<p>Что бы проверить компилятор (после приборки) я решил перенести игру "Цветные Линии" на Микро 80. Не только для проверки.  Нужна хотя бы одна цветная игра. Иначе, зачем я делал цвет?</p>
+<p>В знакогенераторе компьютера Микро 80 есть символы делящие знакоместо на 4 равные части. Текстовый экран 64x25 превращается  в графический 128x50.
+Вчера и сегодня я попробовал нарисовать графику для игры в таком низком разрешении. Что то даже получилось.
+Вы прямо сейчас можете запустить игру в online-эмуляторе. Для этого откройте эмулятор и нажмите вверху страницы "Загрузить  Цветные линии".</p>
+<p><a class="reference external" href="https://alemorf.github.io/micro80_emulator/index.html?ColorLines">https://alemorf.github.io/micro80_emulator/index.html?ColorLines</a></p>
+<p>Недописанные исходники игры тут</p>
+<p><a class="reference external" href="https://github.com/alemorf/c8080/tree/main/examples/lines_for_micro80">https://github.com/alemorf/c8080/tree/main/examples/lines_for_micro80</a></p>
+</blockquote>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../2025-07-23/" rel="prev" title="Оззи">Предыдущая запись</a>
+            </li>
+            <li class="next">
+                <a href="../2025-08-03/" rel="next" title="Новый видос! ZX Spectrum Next">Следующая запись</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Комментарии</h2>
+            
+
+        </section></article>
+</div>
+        </div>
+    </div>
+                <script src="../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#contentView', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+    </script>
+</body>
+</html>

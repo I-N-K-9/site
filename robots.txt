@@ -1,0 +1,4 @@
+Sitemap: https://ink9.ru/sitemapindex.xml
+
+User-Agent: *
+Host: ink9.ru
