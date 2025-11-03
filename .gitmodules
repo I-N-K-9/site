@@ -1,0 +1,4 @@
+[submodule "output"]
+	path = output
+	url = git@github.com:I-N-K-9/site.git
+	branch = output
