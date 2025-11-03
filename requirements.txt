@@ -1,0 +1,2 @@
+nikola == 8.3.*
+jinja2
