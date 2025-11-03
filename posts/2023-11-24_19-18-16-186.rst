@@ -1,0 +1,13 @@
+.. title: Famicom Disk System
+.. slug: 2023-11-24
+.. date: 2023-11-24 19:18:16 UTC+05:00
+.. tags:
+.. category: Repost
+.. description:
+.. type: text
+
+Кластер запилил обзор дисковода для фамикома со всеми техническими деталями, как мы любим
+
+https://youtu.be/M9M69izddtw
+
+.. youtube:: M9M69izddtw

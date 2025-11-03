@@ -1,0 +1,13 @@
+.. title: Новый видос! ZX Spectrum Next
+.. slug: 2025-08-03
+.. date: 2025-08-03 21:03:16 UTC+05:00
+.. tags:
+.. category: Youtube
+.. description:
+.. type: text
+
+Новый видос! Еще в прошлом году довелось поспектрумировать на ZX Spectrum Next, и вот только сейчас получилось смонтировать. В программе распаковка, обзор, зайчатки программирования и осмотр внутренностей
+
+https://youtu.be/p0Ger1O4PLw
+
+.. youtube:: p0Ger1O4PLw

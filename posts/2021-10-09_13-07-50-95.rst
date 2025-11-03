@@ -1,0 +1,13 @@
+.. title: Обзор MISTer ot MJR
+.. slug: 2021-10-09
+.. date: 2021-10-09 13:07:50 UTC+05:00
+.. tags:
+.. category: Repost
+.. description:
+.. type: text
+
+Обзор MISTer ot MJR. Любопытно, но основной ацент он делает на эмуляции аркадных автоматов.
+
+https://www.youtube.com/watch?v=zesVf3XWayI
+
+.. youtube:: zesVf3XWayI

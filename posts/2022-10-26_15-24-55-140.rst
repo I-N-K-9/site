@@ -1,0 +1,11 @@
+.. title: Портирование ScummVM на Next
+.. slug: 2022-10-26
+.. date: 2022-10-26 15:24:55 UTC+05:00
+.. tags:
+.. category:
+.. description:
+.. type: text
+
+Очень интересная статья про портирование ScummVM (движка для квестов от Lucas Arts) на ZX Spectrum Next
+
+https://habr.com/ru/post/662377/

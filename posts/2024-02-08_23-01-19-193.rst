@@ -1,0 +1,19 @@
+.. title: SDK для нокл
+.. slug: 2024-02-08
+.. date: 2024-02-08 23:01:19 UTC+05:00
+.. tags:
+.. category: Repost
+.. description:
+.. type: text
+
+Ого, оказывается, что для китайфонов 15-летней давности ("ноклы" с телевизорами и иже с ними) утекло SDK, и там прямо интересные возможности открываются
+
+Цитируемое сообщение (оригинал в `Telegram Клуб фанатов балдежа <https://t.me/monobogdann/400>`_)
+
+  Вышла новая статья о написании нативных приложений на C для дешевых китайских кнопочных телефонов!
+
+  https://habr.com/ru/companies/timeweb/articles/791072/
+
+  https://pikabu.ru/story/na_pomoyku_nikak_net_pishem_nativnyie_prilozheniya_dlya_deshevyikh_kitayskikh_telefonov_11109908
+
+.. thumbnail:: /images/photo_77@08-02-2024_23-01-19.jpg

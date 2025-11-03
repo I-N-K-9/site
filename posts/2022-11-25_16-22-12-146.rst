@@ -1,0 +1,11 @@
+.. title: Экослон
+.. slug: 2022-11-25
+.. date: 2022-11-25 16:22:12 UTC+05:00
+.. tags:
+.. category:
+.. description:
+.. type: text
+
+Когда гуглил Эксолон, но опечатался
+
+.. thumbnail:: /images/photo_60@25-11-2022_16-22-12.jpg

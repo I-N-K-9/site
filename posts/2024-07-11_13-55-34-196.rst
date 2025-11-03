@@ -1,0 +1,13 @@
+.. title: Взлом DS
+.. slug: 2024-07-11
+.. date: 2024-07-11 13:55:34 UTC+05:00
+.. tags:
+.. category: Repost
+.. description:
+.. type: text
+
+Смотрите, как круто: мало того, что подробная история, так человек еще и достал все девайсы для взлома Nintendo DS, начиная с самых древних, и показал как они работают
+
+https://www.youtube.com/watch?v=5cCFGqxEyXE
+
+.. youtube:: 5cCFGqxEyXE

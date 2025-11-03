@@ -1,0 +1,13 @@
+.. title: Новое видео! Recreated ZX Spectrum
+.. slug: 2023-04-13
+.. date: 2023-04-13 13:21:32 UTC+05:00
+.. tags:
+.. category: Youtube
+.. description:
+.. type: text
+
+Новое видео! Обзор и тест "Recreated ZX Spectrum" - клавиатуры в корпусе оригинальной "резинки", работающей по USB/Bluetooth. Потенциально очень классный девайс, но совершенно угробленный кривым софтом.
+
+https://www.youtube.com/watch?v=9DZBal7dRjk
+
+.. youtube:: 9DZBal7dRjk

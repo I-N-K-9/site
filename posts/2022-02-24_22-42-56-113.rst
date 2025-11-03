@@ -1,0 +1,11 @@
+.. title: Новости санкций
+.. slug: 2022-02-24
+.. date: 2022-02-24 22:42:56 UTC+05:00
+.. tags:
+.. category:
+.. description:
+.. type: text
+
+Новости санкций
+
+.. thumbnail:: /images/photo_47@24-02-2022_22-42-56.jpg

@@ -1,0 +1,13 @@
+.. title: Марио Game & Watch доломали
+.. slug: 2020-11-16
+.. date: 2020-11-16 07:17:54 UTC+05:00
+.. tags:
+.. category: Repost
+.. description:
+.. type: text
+
+Вышло то обещанное видео про хак. Увы, во внешнем флэше действительно хранятся только ромы игр. Шифрование оказалось банальной ксоркой.
+
+https://youtu.be/Rsi8p5gbaps
+
+.. youtube:: Rsi8p5gbaps

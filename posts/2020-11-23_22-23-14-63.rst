@@ -1,0 +1,13 @@
+.. title: Новое видео - обзор Mario Game & Watch
+.. slug: 2020-11-23
+.. date: 2020-11-23 22:23:14 UTC+05:00
+.. tags:
+.. category: Youtube
+.. description:
+.. type: text
+
+Как вы, наверное, догадались по прошлым постам, я не удержался и купил новый Game & Watch с Марио. В этом видео сделал небольшой обзор консоли, плюс дайджест того, что происходит вокруг её взлома.
+
+https://www.youtube.com/watch?v=umGzSjibJI8
+
+.. youtube:: umGzSjibJI8

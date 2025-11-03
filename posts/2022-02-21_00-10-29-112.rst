@@ -1,0 +1,13 @@
+.. title: Про Амигу 1000 от 8bitguy
+.. slug: 2022-02-21
+.. date: 2022-02-21 00:10:29 UTC+05:00
+.. tags:
+.. category: Repost
+.. description:
+.. type: text
+
+8-bit guy начал давно анонсированную серию видео про Амигу. Первый видос - про Амигу 1000! Оказывается, на старте она стоила аж в пять раз дешевле мало что умеющего в те годы гроба IBM PC/AT.
+
+https://www.youtube.com/watch?v=kjapiUQOi2s
+
+.. youtube:: kjapiUQOi2s

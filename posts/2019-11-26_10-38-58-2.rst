@@ -1,0 +1,13 @@
+.. title: Распаковка плат с chipkin.ru
+.. slug: 2019-11-26-1
+.. date: 2019-11-26 10:38:58 UTC+05:00
+.. tags:
+.. category: Youtube
+.. description:
+.. type: text
+
+Распаковываем платы новодельного ретрожелеза (ZX Spectrum и не только): бетадиск (конструктор), Karabas Nano, ISA-OPL2 (клон Adlib), карики для Сеги, и ещё вон ту красную.
+
+https://youtu.be/fWZjtB_hvDU
+
+.. youtube:: fWZjtB_hvDU
