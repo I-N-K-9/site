@@ -1,0 +1,12 @@
+[Core]
+Name = copy_scan_pdf
+Module = copy_scan_pdf
+
+[Nikola]
+PluginCategory = SignalHandler
+
+[Documentation]
+Author = Alexander Tsidaev
+Version = 1.0
+Website = https://ink9.ru
+Description = Copy pdf/djvu compilation of scanned files to scan folder

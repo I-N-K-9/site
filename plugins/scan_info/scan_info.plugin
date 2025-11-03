@@ -1,0 +1,13 @@
+[Core]
+Name = scan_info
+Module = scan_info
+
+[Nikola]
+Compiler = rest
+PluginCategory = CompilerExtension
+
+[Documentation]
+Author = Alexander Tsidaev
+Version = 1.0
+Website = http://ink9.ru
+Description = Scan annotator
