@@ -28,13 +28,11 @@ class Plugin(SignalHandler):
         copied, skipped = 0, 0
 
         for src in files:
-            # путь в output аналогичный относительному пути
             dst = os.path.join(out_root, src.replace(os.path.sep, "/"))
             dst_dir = os.path.dirname(dst)
             os.makedirs(dst_dir, exist_ok=True)
 
             try:
-                # копируем только если новый или нет
                 if not os.path.exists(dst) or os.path.getmtime(src) > os.path.getmtime(dst):
                     shutil.copy2(src, dst)
                     copied += 1
