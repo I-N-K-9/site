@@ -21,9 +21,7 @@
 {% if 'main_index' in pagekind %}
     {{ front_index_header }}
 {% endif %}
-{% if page_links %}
-    {{ pagination.page_navigation(current_page, page_links, prevlink, nextlink, prev_next_links_reversed) }}
-{% endif %}
+
 <div class="postindex">
 {% for post in posts %}
     <article class="h-entry post-{{ post.meta('type') }}" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -50,7 +48,11 @@
     <hr />
 {% endfor %}
 </div>
-{{ helper.html_pager() }}
+
+{% if page_links %}
+    {{ pagination.page_navigation(current_page, page_links, prevlink, nextlink, prev_next_links_reversed) }}
+{% endif %}
+
 {{ comments.comment_link_script() }}
 {{ math.math_scripts_ifposts(posts) }}
 {% endblock %}
