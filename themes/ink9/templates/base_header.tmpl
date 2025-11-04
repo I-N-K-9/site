@@ -30,9 +30,9 @@
 {% endmacro %}
 
 {% macro html_navigation_links() %}
-<div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 menucontainer">
-    <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100 menubar">
-        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+<div class="col-12 col-md-3 order-0 order-md-0 bg-light p-3 menucontainer">
+    <div class="align-items-sm-start px-0 px-md-3 pt-0 pt-md-3 text-white menubar">
+        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-sm-start" id="menu">
             {{ html_navigation_links_entries(navigation_links) }}
         </ul>
     </div>
@@ -44,13 +44,13 @@
         {% if not text.startswith(" ") %}
         <li class="nav-item">
             <a href="{{ url }}" class="nav-link align-middle px-0">
-                <i class="fs-4 {{ icon }}"></i> <span class="ms-1 d-none d-sm-inline">{{ text }}</span>
+                <i class="fs-4 {{ icon }}"></i> <span>{{ text }}</span>
             </a>
         </li>
         {% else %}
         <li class="nav-item level2">
             <a href="{{ url }}" class="nav-link align-middle px-0">
-                <i class="fs-6 {{ icon }}"></i> <span class="ms-1 d-none d-sm-inline">{{ text }}</span>
+                <i class="fs-6 {{ icon }}"></i> <span>{{ text }}</span>
             </a>
         </li>
         {% endif %}

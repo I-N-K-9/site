@@ -17,13 +17,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div class="container">
+    <div class="container px-0 px-md-3">
         <div class="row flex-nowrap header">
             <img src="/assets/images/banner-md.jpg" />
         </div>
-        <div class="row flex-nowrap" id="contentView">
+        <div class="row" id="contentView">
             {{ header.html_navigation_links() }}
-            <div class="col py-3">
+            <div class="col-12 col-md-9 order-0 order-md-1 bg-white p-3">
                 {% block content %}{% endblock %}
             </div>
         </div>
