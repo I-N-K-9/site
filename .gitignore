@@ -3,3 +3,4 @@ cache
 .doit*
 *.pyc
 output
+telegram_session.session
