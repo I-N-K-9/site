@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>INK 9</title><link>https://ink9.ru/</link><description>Спектрум и всякое</description><atom:link href="https://ink9.ru/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>ru</language><copyright>Contents © 2025 &lt;a href="mailto:a.tsidaev@gmail.com"&gt;ink9&lt;/a&gt; </copyright><lastBuildDate>Wed, 05 Nov 2025 16:12:47 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>"Вот так начнёшь изучать фамильные портреты и, пожалуй, уверуешь в переселение душ"</title><link>https://ink9.ru/posts/2025-10-23/</link><dc:creator>ink9</dc:creator><description>&lt;p&gt;Блок питания-то от Магика (и Кворума), оказывается, скопирован с БП от амстрадовского ZX Spectrum +2A/B 😳&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>INK 9</title><link>https://ink9.ru/</link><description>Спектрум и всякое</description><atom:link href="https://ink9.ru/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>ru</language><copyright>Contents © 2026 &lt;a href="mailto:a.tsidaev@gmail.com"&gt;ink9&lt;/a&gt; </copyright><lastBuildDate>Thu, 22 Jan 2026 13:07:19 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Купи The Spectrum от Retro Games Ltd и получи USB-спектрум клаву в подарок 😳</title><link>https://ink9.ru/posts/2026-01-20/</link><dc:creator>ink9</dc:creator><description>&lt;p&gt;Купи The Spectrum от Retro Games Ltd и получи USB-спектрум клаву в подарок 😳&lt;/p&gt;
+&lt;p&gt;Хотел снять небольшой обзор, но докопался до интересного. Егойная клава висит на внутренней USB-шине, да еще и видна как нормальная HID-клава, раскладка которой повторяет надписи на кнопках. Ну то есть ей реально можно пользоваться! Вот это подход у ребят, вот это уважаю!&lt;/p&gt;
+&lt;p&gt;Надо лишь припаять разъем и всё. Кто не знает — The Spectrum это очередная эмуляторная железка от авторов Amiga Mini и т.п. В общем, ждите видео 😄&lt;/p&gt;
+&lt;a class="reference external image-reference" href="https://ink9.ru/images/photo_2026-01-20_18-37-19.jpg"&gt;
+&lt;img alt="/images/photo_2026-01-20_18-37-19.thumbnail.jpg" src="https://ink9.ru/images/photo_2026-01-20_18-37-19.thumbnail.jpg"&gt;
+&lt;/a&gt;</description><guid>https://ink9.ru/posts/2026-01-20/</guid><pubDate>Tue, 20 Jan 2026 18:37:19 GMT</pubDate></item><item><title>С наступающим, друзья! Пусть всё будет хорошо!</title><link>https://ink9.ru/posts/2025-12-31/</link><dc:creator>ink9</dc:creator><description>&lt;p&gt;С наступающим, друзья! Пусть всё будет хорошо!&lt;/p&gt;
+&lt;a class="reference external image-reference" href="https://ink9.ru/images/photo_2025-12-31_12-33-08.jpg"&gt;
+&lt;img alt="/images/photo_2025-12-31_12-33-08.thumbnail.jpg" src="https://ink9.ru/images/photo_2025-12-31_12-33-08.thumbnail.jpg"&gt;
+&lt;/a&gt;</description><guid>https://ink9.ru/posts/2025-12-31/</guid><pubDate>Wed, 31 Dec 2025 12:33:08 GMT</pubDate></item><item><title>Telegram import</title><link>https://ink9.ru/posts/2025-12-10/</link><dc:creator>ink9</dc:creator><description>&lt;a class="reference external image-reference" href="https://ink9.ru/images/document_2025-12-10_20-51-52.mp4"&gt;
+&lt;video src="https://ink9.ru/images/document_2025-12-10_20-51-52.thumbnail.mp4" title="/images/document_2025-12-10_20-51-52.thumbnail.mp4"&gt;
+&lt;a href="https://ink9.ru/images/document_2025-12-10_20-51-52.thumbnail.mp4"&gt;/images/document_2025-12-10_20-51-52.thumbnail.mp4&lt;/a&gt;
+&lt;/video&gt;
+&lt;/a&gt;</description><guid>https://ink9.ru/posts/2025-12-10/</guid><pubDate>Wed, 10 Dec 2025 20:51:52 GMT</pubDate></item><item><title>"Вот так начнёшь изучать фамильные портреты и, пожалуй, уверуешь в переселение душ"</title><link>https://ink9.ru/posts/2025-10-23/</link><dc:creator>ink9</dc:creator><description>&lt;p&gt;Блок питания-то от Магика (и Кворума), оказывается, скопирован с БП от амстрадовского ZX Spectrum +2A/B 😳&lt;/p&gt;
 &lt;a class="reference external image-reference" href="https://ink9.ru/images/photo_2025-10-23_12-41-53.jpg"&gt;
 &lt;img alt="/images/photo_2025-10-23_12-41-53.thumbnail.jpg" src="https://ink9.ru/images/photo_2025-10-23_12-41-53.thumbnail.jpg"&gt;
 &lt;/a&gt;</description><guid>https://ink9.ru/posts/2025-10-23/</guid><pubDate>Thu, 23 Oct 2025 12:41:53 GMT</pubDate></item><item><title>И снова Арвид</title><link>https://ink9.ru/posts/2025-09-25/</link><dc:creator>ink9</dc:creator><description>&lt;p&gt;И вот читаю я, значит, дискеты от Арвида, и на одной из них лежит только странный файл OSS3.BIN на 200 кило. Что-то меня заставило глянуть на образ через вьюер, и внезапно там на пустом месте вовсе не нули, а... какое-то оглавление спектрумского архива!&lt;/p&gt;
@@ -35,29 +47,4 @@
 &lt;p&gt;Стоит ли говорить, что я в свое время и на ютубе-то зарегался, чтоб подписаться на vinxru. Да и канал мой сильно вдохновлен его видео.&lt;/p&gt;
 &lt;a class="reference external image-reference" href="https://ink9.ru/images/photo_2025-08-23_19-34-18.jpg"&gt;
 &lt;img alt="/images/photo_2025-08-23_19-34-18.thumbnail.jpg" src="https://ink9.ru/images/photo_2025-08-23_19-34-18.thumbnail.jpg"&gt;
-&lt;/a&gt;</description><guid>https://ink9.ru/posts/2025-08-23/</guid><pubDate>Sat, 23 Aug 2025 19:34:18 GMT</pubDate></item><item><title>Новый видос! ZX Spectrum Next</title><link>https://ink9.ru/posts/2025-08-03/</link><dc:creator>ink9</dc:creator><description>&lt;p&gt;Новый видос! Еще в прошлом году довелось поспектрумировать на ZX Spectrum Next, и вот только сейчас получилось смонтировать. В программе распаковка, обзор, зайчатки программирования и осмотр внутренностей&lt;/p&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://youtu.be/p0Ger1O4PLw"&gt;https://youtu.be/p0Ger1O4PLw&lt;/a&gt;&lt;/p&gt;
-&lt;div class="youtube-video"&gt;
-&lt;iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/p0Ger1O4PLw?rel=0&amp;amp;wmode=transparent" frameborder="0" allow="encrypted-media" allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;</description><guid>https://ink9.ru/posts/2025-08-03/</guid><pubDate>Sun, 03 Aug 2025 16:03:16 GMT</pubDate></item><item><title>Компилятор Си для 8080 и Цветные линии от Алексея Морозова</title><link>https://ink9.ru/posts/2025-07-25/</link><dc:creator>ink9</dc:creator><description>&lt;p&gt;Кстати, то, что я на третьем месте в дефолтной таблице в лёхиных "Цветных линиях" — это одна из важнейших строк в моём резюме 😄 Релиз под каждую платформу смотрю, и каждый раз приятно.
-А компилятор очень интересный. Вообще, беда с Си компиляторами на 8080/z80&lt;/p&gt;
-&lt;a class="reference external image-reference" href="https://ink9.ru/images/photo_95@25-07-2025_13-29-18.jpg"&gt;
-&lt;img alt="/images/photo_95@25-07-2025_13-29-18.thumbnail.jpg" src="https://ink9.ru/images/photo_95@25-07-2025_13-29-18.thumbnail.jpg"&gt;
-&lt;/a&gt;
-&lt;p&gt;Цитируемое сообщение (оригинал в &lt;a class="reference external" href="https://t.me/AlemorfHobby/358"&gt;Telegram "Алексей Морозов - Хобби и ретрокомпьютеры"&lt;/a&gt;)&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Привет Народ!  Я закончил прибирать исходники компилятора Си для процессора 8080. А точнее, мне надоело это делать. Все  иходники выложены сюда.&lt;/p&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://github.com/alemorf/c8080"&gt;https://github.com/alemorf/c8080&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Доделывать компилятор буду, когда буду им сам пользоваться.&lt;/p&gt;
-&lt;p&gt;Что бы проверить компилятор (после приборки) я решил перенести игру "Цветные Линии" на Микро 80. Не только для проверки.  Нужна хотя бы одна цветная игра. Иначе, зачем я делал цвет?&lt;/p&gt;
-&lt;p&gt;В знакогенераторе компьютера Микро 80 есть символы делящие знакоместо на 4 равные части. Текстовый экран 64x25 превращается  в графический 128x50.
-Вчера и сегодня я попробовал нарисовать графику для игры в таком низком разрешении. Что то даже получилось.
-Вы прямо сейчас можете запустить игру в online-эмуляторе. Для этого откройте эмулятор и нажмите вверху страницы "Загрузить  Цветные линии".&lt;/p&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://alemorf.github.io/micro80_emulator/index.html?ColorLines"&gt;https://alemorf.github.io/micro80_emulator/index.html?ColorLines&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Недописанные исходники игры тут&lt;/p&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://github.com/alemorf/c8080/tree/main/examples/lines_for_micro80"&gt;https://github.com/alemorf/c8080/tree/main/examples/lines_for_micro80&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</description><guid>https://ink9.ru/posts/2025-07-25/</guid><pubDate>Fri, 25 Jul 2025 08:29:39 GMT</pubDate></item><item><title>Оззи</title><link>https://ink9.ru/posts/2025-07-23/</link><dc:creator>ink9</dc:creator><description>&lt;p&gt;Прощай, Izzy Azbeen 😢&lt;/p&gt;
-&lt;p&gt;В 2014 я плюнул на всё и сгонял в Бельгию на Black Sabbath. Рад, что удалось увидеть легенду вживую.&lt;/p&gt;
-&lt;a class="reference external image-reference" href="https://ink9.ru/images/photo_94@23-07-2025_00-13-27.jpg"&gt;
-&lt;img alt="/images/photo_94@23-07-2025_00-13-27.thumbnail.jpg" src="https://ink9.ru/images/photo_94@23-07-2025_00-13-27.thumbnail.jpg"&gt;
-&lt;/a&gt;</description><guid>https://ink9.ru/posts/2025-07-23/</guid><pubDate>Tue, 22 Jul 2025 19:13:27 GMT</pubDate></item></channel></rss>
+&lt;/a&gt;</description><guid>https://ink9.ru/posts/2025-08-23/</guid><pubDate>Sat, 23 Aug 2025 19:34:18 GMT</pubDate></item></channel></rss>
