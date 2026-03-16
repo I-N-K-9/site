@@ -98,3 +98,9 @@ html[dir="rtl"] .archivenav .pager .previous:before {
 .archivenav .pager .next {
 	float: right;
 }
+
+/* Custom text styles */
+
+.strike {
+  text-decoration: line-through;
+}

@@ -51,7 +51,11 @@ def tag_role(tag):
     """ Generates a role for the specified tag """
     def _spanning_role(role, rawtext, text, lineno, inliner,
                        options={}, content=[]):
-        """ reStructuredText role for generating the a tag element """
-        return [nodes.raw('', '<{tag}>{text}</{tag}>'.format(
-            tag=tag, text=text), format='html')], []
+        """ reStructuredText role for generating the HTML element """
+        # Special case for :strike: — use span with CSS class instead of <s>
+        if tag == 's':
+            html = '<span class="strike">{text}</span>'.format(text=text)
+        else:
+            html = '<{tag}>{text}</{tag}>'.format(tag=tag, text=text)
+        return [nodes.raw('', html, format='html')], []
     return _spanning_role
