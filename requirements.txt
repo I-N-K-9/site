@@ -1,2 +1,4 @@
 nikola == 8.3.*
 jinja2
+telethon
+python-socks[asyncio]

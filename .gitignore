@@ -4,3 +4,4 @@ cache
 *.pyc
 output
 telegram_session.session
+import_tg.sh

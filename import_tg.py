@@ -14,6 +14,7 @@ import re
 import sys
 import shutil
 import asyncio
+from urllib.parse import urlparse
 from datetime import datetime, timedelta
 from dateutil import tz
 from telethon import TelegramClient
@@ -33,6 +34,59 @@ def ensure_dirs(root):
     os.makedirs(posts_dir, exist_ok=True)
     os.makedirs(images_dir, exist_ok=True)
     return posts_dir, images_dir
+
+
+def proxy_from_env():
+    """Parse https_proxy / HTTPS_PROXY into Telethon proxy dict."""
+    proxy_url = os.environ.get("https_proxy") or os.environ.get("HTTPS_PROXY")
+    if not proxy_url:
+        return None
+
+    parsed = urlparse(proxy_url)
+    if not parsed.hostname:
+        raise ValueError(f"Invalid proxy URL: {proxy_url}")
+
+    scheme = (parsed.scheme or "http").lower()
+    scheme_map = {
+        "http": "http",
+        "https": "http",
+        "socks5": "socks5",
+        "socks4": "socks4",
+    }
+    proxy_type = scheme_map.get(scheme)
+    if not proxy_type:
+        raise ValueError(f"Unsupported proxy scheme: {scheme}")
+
+    default_ports = {"http": 8080, "socks5": 1080, "socks4": 1080}
+    proxy = {
+        "proxy_type": proxy_type,
+        "addr": parsed.hostname,
+        "port": parsed.port or default_ports[proxy_type],
+    }
+    if parsed.username:
+        proxy["username"] = parsed.username
+    if parsed.password:
+        proxy["password"] = parsed.password
+    return proxy
+
+
+def ensure_proxy_lib():
+    """Telethon routes all proxies (including HTTP) through python-socks or PySocks."""
+    try:
+        import python_socks  # noqa: F401
+        return
+    except ImportError:
+        pass
+    try:
+        import socks  # noqa: F401
+        return
+    except ImportError:
+        print(
+            "Proxy is set via https_proxy, but no proxy library is installed.\n"
+            "Telethon uses python-socks/PySocks for HTTP proxies too (not urllib/requests).\n"
+            "Install with: pip install 'python-socks[asyncio]'"
+        )
+        sys.exit(1)
 
 
 def parse_url(url: str):
@@ -174,10 +228,21 @@ async def main(argv):
 
     if not api_id or not api_hash:
         print("Введите Telegram API credentials (можно сохранить в TG_API_ID и TG_API_HASH):")
+    
+    if not api_id:
         api_id = input("api_id: ").strip()
+    else:
+        print("api_id:", api_id)
+
+    if not api_hash:
         api_hash = input("api_hash: ").strip()
 
-    client = TelegramClient(SESSION_NAME, int(api_id), api_hash)
+    proxy = proxy_from_env()
+    if proxy:
+        ensure_proxy_lib()
+        print(f"[i] Using proxy: {proxy['addr']}:{proxy['port']} ({proxy['proxy_type']})")
+
+    client = TelegramClient(SESSION_NAME, int(api_id), api_hash, proxy=proxy)
     await client.start()
 
     try:
