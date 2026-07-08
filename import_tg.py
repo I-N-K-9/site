@@ -22,7 +22,10 @@ from telethon.errors import ChannelInvalidError, MessageIdInvalidError
 
 
 # === Настройки ===
-SESSION_NAME = "telegram_session"  # где хранится сессия Telegram
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+SESSION_PATH = os.environ.get(
+    "TG_SESSION", os.path.join(SCRIPT_DIR, "telegram_session")
+)
 NIKOLA_ROOT = "."  # по умолчанию
 POSTS_SUBDIR = "posts"
 IMAGES_SUBDIR = "images"
@@ -242,8 +245,19 @@ async def main(argv):
         ensure_proxy_lib()
         print(f"[i] Using proxy: {proxy['addr']}:{proxy['port']} ({proxy['proxy_type']})")
 
-    client = TelegramClient(SESSION_NAME, int(api_id), api_hash, proxy=proxy)
-    await client.start()
+    session_file = f"{SESSION_PATH}.session"
+    print(f"[i] Session file: {session_file}")
+
+    client = TelegramClient(SESSION_PATH, int(api_id), api_hash, proxy=proxy)
+    await client.connect()
+    if not await client.is_user_authorized():
+        print("[!] No authorized session found, starting interactive login...")
+        await client.start()
+    else:
+        me = await client.get_me()
+        name = me.first_name if me and me.first_name else "unknown"
+        phone = me.phone if me and me.phone else "unknown"
+        print(f"[i] Logged in as {name} ({phone})")
 
     try:
         text, files, dt = await fetch_and_save_media(client, channel, msg_id, images_dir)
