@@ -63,7 +63,26 @@
     
 
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2024-10-29/" class="u-url">Реверс ULA</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2024-12-31/" class="u-url">С новым годом!</a></h1>
+        <div class="metadata">
+            <p class="dateline">
+                <time class="published dt-published" datetime="2024-12-31T20:36:22+05:00" itemprop="datePublished" title="2024-12-31 20:36">2024-12-31 20:36</time></p>
+                <p class="commentline">    
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <p>С наступающим, друзья! У меня год получился крайне неплодотворный в онлайне, зато очень насыщенный в оффлайне — например, я теперь кандидат физ.-мат. наук. В следующем году, надеюсь, все перевернется и я выпаду уже из реальной жизни, чтобы доделать все начатое тут.</p>
+<p>Ну что же, RANDOMIZE USR 2025!</p>
+<p>PS И вот написал я предыдущую строчку, и стало жутко интересно, а что эта программа делает-то? Понятно, что запускает какой-то код в ПЗУ по адресу 2025, но что там? Сходил в эмулятор, проверил. Комп не виснет, не сбрасывается, пытается читать порт #FE. Выглядит как загрузка с кассеты, и действительно, подсовываем TAP-ку, и идут полосы. Но в конце всегда R Tape Loading Error. Что происходит-то?</p>
+<p>Попробовал другие адреса, чуть поменьше. Интересно, что до 2022 у нас несколько "лет" стабильно сразу же был R Tape Loading Error, даже без попытки что-то грузить. А вот с 2022 началась какая-то непонятная хрень и длится до сих пор.</p>
+<p>Пришлось расчехлить отладчик и заодно читать "Полный дизассемблер ПЗУ". В общем, адрес 2025 у нас находится внутри процедуры VERIFY (это загрузка блока с ленты и сравнение его с тем, что находится в памяти). Но раз мы прыгаем туда как попало в середину процедуры, то и в регистрах у нас мусор. В итоге верификация идет для куска кода, начинающегося по адресу 2D2B (то есть грузим мы в ПЗУ, что не имеет смысла) и длиной 23778 байт. И вот тут мне стало интересно, а можно ли программу, состоящую из одной строки "RANDOMIZE USR 2025" заставить делать что-то если не полезное, то хотя бы симпатичное. Сразу приходит на ум, что раз блок мы грузим огроменный (почти 24 килобайта!), то хоть начало у него и в ПЗУ, конец-то будет в ОЗУ. И по пути мы перезапишем и экран, и переменные бейсика, и этим можно воспользоваться. Поэтому просим нейросеть сгенерить нам черно-белую елку, конвертим в 6912, кладем внутрь блока длиной 23778 точно в то место, которое загрузится в экран, и готово! Результат на картинке, тапка в комменте 🌲 Внутри лоадер из одного нашего randomize + беззаголовочный блок нужной длины.</p>
+<p>Поэкспериментировал бы еще, но уже пора садиться за салаты. Так что постскриптум закончился так же неожиданно, как и начался 😀 Удачи вам, увидимся в новом году!</p>
+<a class="reference external image-reference" href="images/photo_80@31-12-2024_20-36-22.jpg">
+<img alt="/images/photo_80@31-12-2024_20-36-22.thumbnail.jpg" src="images/photo_80@31-12-2024_20-36-22.thumbnail.jpg"></a>
+    </div>
+    </article><hr>
+<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2024-10-29/" class="u-url">Реверс ULA</a></h1>
         <div class="metadata">
             <p class="dateline">
                 <time class="published dt-published" datetime="2024-10-29T14:05:56+05:00" itemprop="datePublished" title="2024-10-29 14:05">2024-10-29 14:05</time></p>
@@ -209,24 +228,6 @@
 <p><a class="reference external" href="https://youtu.be/M9M69izddtw">https://youtu.be/M9M69izddtw</a></p>
 <div class="youtube-video">
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/M9M69izddtw?rel=0&amp;wmode=transparent" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
-</div>
-    </div>
-    </article><hr>
-<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2023-11-15/" class="u-url">C-Jeff - Big Steel Wheels</a></h1>
-        <div class="metadata">
-            <p class="dateline">
-                <time class="published dt-published" datetime="2023-11-15T15:18:27+05:00" itemprop="datePublished" title="2023-11-15 15:18">2023-11-15 15:18</time></p>
-                <p class="commentline">    
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <p>C-Jeff - Big Steel Wheels</p>
-<p>Страшно представить, но сегодня этому альбому исполнилось 10 лет. Альбом, который можно слушать и переслушивать, гонять по кругу и донимать им соседей. C-Jeff, будучи известным композитором на Спектрум-сцене, сделал этим релизом одну из самых удачных попыток вывести чиптюн на большую аудиторию. Именно "попыток", потому что альбом явно недополучил того внимания, которое заслуживает, а с годами он, кажется, просто забылся. На iTunes его больше нет, а на остальных стримингах никогда и не было. Так что хотя бы в юбилей вспомним этот чудесный релиз.</p>
-<p>Если вам нравится прогрессив рок/метал - Rush (строчкой из Headlong Flight альбом и назван), Queensryche, Dream Theater - то очень рекомендую к прослушиванию. Чудесная атмосфера, вдохновленная саундтреками к фильмам 80-х (ещё до того, как это стало мейнстримом). Куча приглашенных музыкантов. Ну и обложка просто отпадная и просится на конверт винила. В целом, масштаб и качество всей проделанной работы потрясают.</p>
-<p><a class="reference external" href="https://www.youtube.com/watch?v=ekH9IMajhOA">https://www.youtube.com/watch?v=ekH9IMajhOA</a></p>
-<div class="youtube-video">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ekH9IMajhOA?rel=0&amp;wmode=transparent" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
 </div>
     </div>
     </article><hr>
