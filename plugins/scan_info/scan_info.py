@@ -23,6 +23,51 @@ def make_link(href, text, css_class=""):
     return f'<a href="{href}"{cls}>{text}</a>'
 
 
+def build_download_links_html(book_dirname):
+    """Return HTML for PDF/DJVU download links, or empty string."""
+    download_links = []
+    pdf_path_fs = os.path.join(SCANS_DIR, f"{book_dirname}.pdf")
+    djvu_path_fs = os.path.join(SCANS_DIR, f"{book_dirname}.djvu")
+
+    if os.path.isfile(pdf_path_fs):
+        size = format_size_bytes(pdf_path_fs)
+        href = f"/{pdf_path_fs.replace(os.path.sep, '/')}"
+        download_links.append(
+            make_link(
+                href,
+                f"<i class='bi bi-file-earmark-pdf' style='color:#c00;'></i> Скачать PDF ({size})",
+                "download pdf",
+            )
+        )
+
+    if os.path.isfile(djvu_path_fs):
+        size = format_size_bytes(djvu_path_fs)
+        href = f"/{djvu_path_fs.replace(os.path.sep, '/')}"
+        download_links.append(
+            make_link(
+                href,
+                f"<i class='bi bi-file-earmark' style='color:#c00;'></i> Скачать DJVU ({size})",
+                "download djvu",
+            )
+        )
+
+    return "<br />".join(download_links)
+
+
+def gallery_context_filler(context, template_name):
+    """Add scan download links to individual gallery pages."""
+    if template_name != "gallery.tmpl":
+        return
+    gallery_path = context.get("gallery_path", "")
+    prefix = SCANS_DIR + os.sep
+    if not gallery_path.startswith(prefix):
+        return
+    book_dirname = os.path.basename(gallery_path)
+    html = build_download_links_html(book_dirname)
+    if html:
+        context["scan_downloads_html"] = html
+
+
 # ---- реализация роли (кошка) ----
 def annotate_scan(role, rawtext, text, lineno, inliner, options={}, content=[]):
     # Простая роль: :scan:`текст` -> <i>текст</i>
@@ -79,20 +124,7 @@ class ScanDirective(Directive):
                 line=self.lineno
             )]
 
-        # Проверяем наличие PDF / DJVU файлов рядом (scans/Quorum_64.pdf и .djvu)
-        pdf_path_fs = os.path.join(SCANS_DIR, f"{book_dirname}.pdf")
-        djvu_path_fs = os.path.join(SCANS_DIR, f"{book_dirname}.djvu")
-
-        download_links = []
-        if os.path.isfile(pdf_path_fs):
-            size = format_size_bytes(pdf_path_fs)
-            href = f"/{pdf_path_fs.replace(os.path.sep, '/')}"
-            download_links.append(make_link(href, f"<i class='bi bi-file-earmark-pdf' style='color:#c00;'></i> Скачать PDF ({size})", "download pdf"))
-
-        if os.path.isfile(djvu_path_fs):
-            size = format_size_bytes(djvu_path_fs)
-            href = f"/{djvu_path_fs.replace(os.path.sep, '/')}"
-            download_links.append(make_link(href, f"<i class='bi bi-file-earmark' style='color:#c00;'></i> Скачать DJVU ({size})", "download djvu"))
+        downloads_html = build_download_links_html(book_dirname)
 
         # ссылка на галерею (директория должна существовать)
         gallery_href = f"/{gallery_path.replace(os.path.sep, '/')}/"
@@ -100,8 +132,6 @@ class ScanDirective(Directive):
         # thumbnail HTML (если нет картинок, показываем пустой контейнер)
         thumb_html = (f'<img src="{thumb_rel}" alt="{book_title}" class="scan-thumb" />'
                       if thumb_rel else '<div class="scan-thumb empty-thumb"></div>')
-
-        downloads_html = " ".join(download_links) if download_links else ""
 
         # Формируем HTML-блок: левый столб — thumb + title, правый — описание + ссылки
         html = f"""
@@ -133,4 +163,5 @@ class Plugin(RestExtension):
 
     def set_site(self, site):
         self.site = site
+        site.config["GLOBAL_CONTEXT_FILLER"].append(gallery_context_filler)
         return super().set_site(site)
