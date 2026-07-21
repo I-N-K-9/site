@@ -1,5 +1,7 @@
 # plugins/scan_info/scan_info.py
 import os
+import re
+import blinker
 from docutils import nodes
 from docutils.parsers.rst import roles, directives
 from docutils.parsers.rst import Directive
@@ -8,6 +10,9 @@ from nikola.plugin_categories import RestExtension
 
 # Папка с галереями (от корня сайта / рабочей директории сборки)
 SCANS_DIR = "scans"
+LIBRARY_RST = os.path.join("pages", "library.rst")
+
+_scan_catalog_cache = {"mtime": None, "data": {}}
 
 
 def format_size_bytes(path):
@@ -54,8 +59,69 @@ def build_download_links_html(book_dirname):
     return "<br />".join(download_links)
 
 
+def parse_library_rst(path=LIBRARY_RST):
+    """Parse .. scan:: entries from library.rst, keyed by :path:."""
+    try:
+        mtime = os.path.getmtime(path)
+    except OSError:
+        return {}
+
+    if _scan_catalog_cache["mtime"] == mtime:
+        return _scan_catalog_cache["data"]
+
+    catalog = {}
+    try:
+        with open(path, encoding="utf-8") as f:
+            lines = f.readlines()
+    except OSError:
+        return {}
+
+    i = 0
+    while i < len(lines):
+        match = re.match(r"\.\.\s+scan::\s+(.+?)\s*$", lines[i])
+        if match:
+            title = match.group(1).strip()
+            book_path = None
+            desc = None
+            i += 1
+            while i < len(lines) and re.match(r"\s+:", lines[i]):
+                opt = lines[i].strip()
+                if opt.startswith(":path:"):
+                    book_path = opt[len(":path:"):].strip()
+                elif opt.startswith(":desc:"):
+                    desc = opt[len(":desc:"):].strip()
+                i += 1
+            if book_path:
+                catalog[book_path] = {"title": title, "desc": desc or ""}
+            continue
+        i += 1
+
+    _scan_catalog_cache["mtime"] = mtime
+    _scan_catalog_cache["data"] = catalog
+    return catalog
+
+
+def apply_scan_metadata(context, book_dirname):
+    """Apply title and description from library.rst to gallery context."""
+    info = parse_library_rst().get(book_dirname)
+    if not info:
+        return
+
+    context["scan_title"] = info["title"]
+    if info["desc"]:
+        context["scan_desc"] = info["desc"]
+        context["title"] = f"{info['title']}: {info['desc']}"
+    else:
+        context["title"] = info["title"]
+
+    crumbs = context.get("crumbs")
+    if crumbs:
+        link, _text = crumbs[-1]
+        context["crumbs"] = crumbs[:-1] + [[link, info["title"]]]
+
+
 def gallery_context_filler(context, template_name):
-    """Add scan download links to individual gallery pages."""
+    """Add scan metadata and download links to individual gallery pages."""
     if template_name != "gallery.tmpl":
         return
     gallery_path = context.get("gallery_path", "")
@@ -63,9 +129,28 @@ def gallery_context_filler(context, template_name):
     if not gallery_path.startswith(prefix):
         return
     book_dirname = os.path.basename(gallery_path)
+    apply_scan_metadata(context, book_dirname)
     html = build_download_links_html(book_dirname)
     if html:
         context["scan_downloads_html"] = html
+
+
+def _patch_gallery_tasks(sender):
+    """Rebuild gallery pages when library.rst changes."""
+    if not os.path.isfile(LIBRARY_RST):
+        return
+
+    from nikola.plugins.task.galleries import Galleries
+
+    original_gen_tasks = Galleries.gen_tasks
+
+    def gen_tasks_with_library_dep(self):
+        for task in original_gen_tasks(self):
+            if task.get("basename") == "render_galleries" and "file_dep" in task:
+                task["file_dep"] = list(task["file_dep"]) + [LIBRARY_RST]
+            yield task
+
+    Galleries.gen_tasks = gen_tasks_with_library_dep
 
 
 # ---- реализация роли (кошка) ----
@@ -164,4 +249,8 @@ class Plugin(RestExtension):
     def set_site(self, site):
         self.site = site
         site.config["GLOBAL_CONTEXT_FILLER"].append(gallery_context_filler)
+        blinker.signal("initialized").connect(self._on_initialized)
         return super().set_site(site)
+
+    def _on_initialized(self, sender, **kwargs):
+        _patch_gallery_tasks(sender)

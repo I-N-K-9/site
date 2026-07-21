@@ -7,8 +7,13 @@
 
 {% block content %}
     {{ ui.breadcrumbs(crumbs) }}
-    {% if title %}
+    {% if scan_title %}
+    <h1>{{ scan_title|e }}</h1>
+    {% elif title %}
     <h1>{{ title|e }}</h1>
+    {% endif %}
+    {% if scan_desc %}
+    <div class="scan-desc" style="margin-bottom:1em;">{{ scan_desc|e }}</div>
     {% endif %}
     {% if scan_downloads_html %}
     <div class="scan-links" style="margin-bottom:1em;">
