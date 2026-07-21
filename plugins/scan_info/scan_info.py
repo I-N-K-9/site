@@ -225,7 +225,7 @@ class ScanDirective(Directive):
     <a href="{gallery_href}">{thumb_html}</a>
   </div>
   <div class="scan-right" style="flex:1;">
-    <h3>{book_title}</h3>
+    <h3>{make_link(gallery_href, book_title, "scan-title")}</h3>
     <div class="scan-desc">{desc}</div>
     <div class="scan-links" style="margin-top:0.5em;">
       {make_link(gallery_href, "<i class='bi bi-search' style='color:#00c;'></i> Просмотреть", 'view-gallery')}<br />
