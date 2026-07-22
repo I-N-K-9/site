@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>INK 9</title><link>https://ink9.ru/</link><description>Спектрум и всякое</description><atom:link href="https://ink9.ru/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>ru</language><copyright>Contents © 2026 &lt;a href="mailto:a.tsidaev@gmail.com"&gt;ink9&lt;/a&gt; </copyright><lastBuildDate>Wed, 22 Jul 2026 16:58:11 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Мода 90-х</title><link>https://ink9.ru/posts/2026-07-11/</link><dc:creator>ink9</dc:creator><description>&lt;p&gt;Мода 90-х. Если сисадмины предпочитали свитеры, то сисопы — джемперы 😄
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>INK 9</title><link>https://ink9.ru/</link><description>Спектрум и всякое</description><atom:link href="https://ink9.ru/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>ru</language><copyright>Contents © 2026 &lt;a href="mailto:a.tsidaev@gmail.com"&gt;ink9&lt;/a&gt; </copyright><lastBuildDate>Wed, 22 Jul 2026 20:24:13 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Эмулятор криво вставленного картриджа Famicom</title><link>https://ink9.ru/posts/2026-07-22/</link><dc:creator>ink9</dc:creator><description>&lt;p&gt;Там даже есть кнопка "дунуть в картридж". Точнее, я не знаю, как она называется, там иероглифами, но она разом все "грязные" пины очищает.
+Классная софтина, можно долго играться.&lt;/p&gt;
+&lt;p&gt;Цитируемое сообщение (оригинал в &lt;a class="reference external" href="https://t.me/dendy_forever/1043"&gt;Telegram "Dendy Forever"&lt;/a&gt;)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Японец GoroMan создал достоверный онлайн-эмулятор  криво вставленного картриджа. В него можно загружать свой ROM, можно шатать картридж под разным углами и смотреть, какой эффект это вызывает. Причем показано, какие именно контакты картриджа отходят при этом.&lt;/p&gt;
+&lt;p&gt;Помучить свой ромсет можно тут:
+&lt;a class="reference external" href="https://goroman.github.io/cluade-famicom-emu/"&gt;https://goroman.github.io/cluade-famicom-emu/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;a class="reference external image-reference" href="https://ink9.ru/images/photo_2026-07-22_11-51-06.jpg"&gt;
+&lt;img alt="/images/photo_2026-07-22_11-51-06.thumbnail.jpg" src="https://ink9.ru/images/photo_2026-07-22_11-51-06.thumbnail.jpg"&gt;
+&lt;/a&gt;</description><guid>https://ink9.ru/posts/2026-07-22/</guid><pubDate>Wed, 22 Jul 2026 16:27:48 GMT</pubDate></item><item><title>Мода 90-х</title><link>https://ink9.ru/posts/2026-07-11/</link><dc:creator>ink9</dc:creator><description>&lt;p&gt;Мода 90-х. Если сисадмины предпочитали свитеры, то сисопы — джемперы 😄
 (фото из книжки из прошлого поста, качканарская часть 2:5080)&lt;/p&gt;
 &lt;a class="reference external image-reference" href="https://ink9.ru/images/photo_2026-07-11_19-39-10.jpg"&gt;
 &lt;img alt="/images/photo_2026-07-11_19-39-10.thumbnail.jpg" src="https://ink9.ru/images/photo_2026-07-11_19-39-10.thumbnail.jpg"&gt;
@@ -35,7 +45,4 @@
 &lt;p&gt;Очень хочу запустить. Когда читал описания (а раньше про Арвид писали много, и в прессе, и в интернете), всегда не верилось, что кто-то реально вот такую вот идею довел не просто до прототипа, а аж до серии, и оно работало, и даже стабильно. Выглядеть должно завораживающе.&lt;/p&gt;
 &lt;a class="reference external image-reference" href="https://ink9.ru/images/photo_2025-09-24_20-32-36.jpg"&gt;
 &lt;img alt="/images/photo_2025-09-24_20-32-36.thumbnail.jpg" src="https://ink9.ru/images/photo_2025-09-24_20-32-36.thumbnail.jpg"&gt;
-&lt;/a&gt;</description><guid>https://ink9.ru/posts/2025-09-24/</guid><pubDate>Wed, 24 Sep 2025 20:32:36 GMT</pubDate></item><item><title>Институт хороший и справочники интересные</title><link>https://ink9.ru/posts/2025-09-14/</link><dc:creator>ink9</dc:creator><description>&lt;p&gt;(блуждаю через гуглотранслейт на сайте японского эмулятора Family Basic)&lt;/p&gt;
-&lt;a class="reference external image-reference" href="https://ink9.ru/images/photo_2025-09-14_12-16-38.jpg"&gt;
-&lt;img alt="/images/photo_2025-09-14_12-16-38.thumbnail.jpg" src="https://ink9.ru/images/photo_2025-09-14_12-16-38.thumbnail.jpg"&gt;
-&lt;/a&gt;</description><guid>https://ink9.ru/posts/2025-09-14/</guid><pubDate>Sun, 14 Sep 2025 12:16:38 GMT</pubDate></item></channel></rss>
+&lt;/a&gt;</description><guid>https://ink9.ru/posts/2025-09-24/</guid><pubDate>Wed, 24 Sep 2025 20:32:36 GMT</pubDate></item></channel></rss>

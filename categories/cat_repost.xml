@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>INK 9 (Записи о Repost)</title><link>https://ink9.ru/</link><description></description><atom:link href="https://ink9.ru/categories/cat_repost.xml" rel="self" type="application/rss+xml"></atom:link><language>ru</language><copyright>Contents © 2026 &lt;a href="mailto:a.tsidaev@gmail.com"&gt;ink9&lt;/a&gt; </copyright><lastBuildDate>Wed, 22 Jul 2026 16:58:11 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Компилятор Си для 8080 и Цветные линии от Алексея Морозова</title><link>https://ink9.ru/posts/2025-07-25/</link><dc:creator>ink9</dc:creator><description>&lt;p&gt;Кстати, то, что я на третьем месте в дефолтной таблице в лёхиных "Цветных линиях" — это одна из важнейших строк в моём резюме 😄 Релиз под каждую платформу смотрю, и каждый раз приятно.
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>INK 9 (Записи о Repost)</title><link>https://ink9.ru/</link><description></description><atom:link href="https://ink9.ru/categories/cat_repost.xml" rel="self" type="application/rss+xml"></atom:link><language>ru</language><copyright>Contents © 2026 &lt;a href="mailto:a.tsidaev@gmail.com"&gt;ink9&lt;/a&gt; </copyright><lastBuildDate>Wed, 22 Jul 2026 20:24:13 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Эмулятор криво вставленного картриджа Famicom</title><link>https://ink9.ru/posts/2026-07-22/</link><dc:creator>ink9</dc:creator><description>&lt;p&gt;Там даже есть кнопка "дунуть в картридж". Точнее, я не знаю, как она называется, там иероглифами, но она разом все "грязные" пины очищает.
+Классная софтина, можно долго играться.&lt;/p&gt;
+&lt;p&gt;Цитируемое сообщение (оригинал в &lt;a class="reference external" href="https://t.me/dendy_forever/1043"&gt;Telegram "Dendy Forever"&lt;/a&gt;)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Японец GoroMan создал достоверный онлайн-эмулятор  криво вставленного картриджа. В него можно загружать свой ROM, можно шатать картридж под разным углами и смотреть, какой эффект это вызывает. Причем показано, какие именно контакты картриджа отходят при этом.&lt;/p&gt;
+&lt;p&gt;Помучить свой ромсет можно тут:
+&lt;a class="reference external" href="https://goroman.github.io/cluade-famicom-emu/"&gt;https://goroman.github.io/cluade-famicom-emu/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;a class="reference external image-reference" href="https://ink9.ru/images/photo_2026-07-22_11-51-06.jpg"&gt;
+&lt;img alt="/images/photo_2026-07-22_11-51-06.thumbnail.jpg" src="https://ink9.ru/images/photo_2026-07-22_11-51-06.thumbnail.jpg"&gt;
+&lt;/a&gt;</description><guid>https://ink9.ru/posts/2026-07-22/</guid><pubDate>Wed, 22 Jul 2026 16:27:48 GMT</pubDate></item><item><title>Компилятор Си для 8080 и Цветные линии от Алексея Морозова</title><link>https://ink9.ru/posts/2025-07-25/</link><dc:creator>ink9</dc:creator><description>&lt;p&gt;Кстати, то, что я на третьем месте в дефолтной таблице в лёхиных "Цветных линиях" — это одна из важнейших строк в моём резюме 😄 Релиз под каждую платформу смотрю, и каждый раз приятно.
 А компилятор очень интересный. Вообще, беда с Си компиляторами на 8080/z80&lt;/p&gt;
 &lt;a class="reference external image-reference" href="https://ink9.ru/images/photo_95@25-07-2025_13-29-18.jpg"&gt;
 &lt;img alt="/images/photo_95@25-07-2025_13-29-18.thumbnail.jpg" src="https://ink9.ru/images/photo_95@25-07-2025_13-29-18.thumbnail.jpg"&gt;
@@ -68,12 +78,4 @@ Linux там даже работает, правда загрузка на же�
 &lt;p&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=Lrh8XTV8dFk"&gt;https://www.youtube.com/watch?v=Lrh8XTV8dFk&lt;/a&gt;&lt;/p&gt;
 &lt;div class="youtube-video"&gt;
 &lt;iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Lrh8XTV8dFk?rel=0&amp;amp;wmode=transparent" frameborder="0" allow="encrypted-media" allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;</description><guid>https://ink9.ru/posts/2023-09-09/</guid><pubDate>Sat, 09 Sep 2023 18:54:00 GMT</pubDate></item><item><title>Об игре "Приключения Винни Пуха"</title><link>https://ink9.ru/posts/2023-08-22/</link><dc:creator>ink9</dc:creator><description>&lt;p&gt;Интересные мемуары о геймдеве 90-х. Под конец LAV внезапно поёт AY под гитару.&lt;/p&gt;
-&lt;p&gt;Цитируемое сообщение (оригинал в &lt;a class="reference external" href="https://t.me/bornded/6499"&gt;Telegram BOЯNДЕД — дед0в атака!&lt;/a&gt;)&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Русские "братья Оливеры" толкают телегу за создание игры про медведя на ZX&lt;/p&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=5q-BnobZpys"&gt;https://www.youtube.com/watch?v=5q-BnobZpys&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class="youtube-video"&gt;
-&lt;iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/5q-BnobZpys?rel=0&amp;amp;wmode=transparent" frameborder="0" allow="encrypted-media" allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;</description><guid>https://ink9.ru/posts/2023-08-22/</guid><pubDate>Tue, 22 Aug 2023 08:10:56 GMT</pubDate></item></channel></rss>
+&lt;/div&gt;</description><guid>https://ink9.ru/posts/2023-09-09/</guid><pubDate>Sat, 09 Sep 2023 18:54:00 GMT</pubDate></item></channel></rss>
