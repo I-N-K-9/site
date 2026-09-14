@@ -14,6 +14,6 @@
 
 https://github.com/kozynax/kozynax/releases
 
-Поддерживаемые платформы — Windows/Linux/MaxOS. Эмулируемые машины — всё, что мог ZXMAK2, и даже больше. Подробности в теме на форуме.
+Поддерживаемые платформы — Windows/Linux/MaxOS. Эмулируемые машины — всё, что мог ZXMAK2, и даже больше. Подробности в теме на форуме - https://zx-pk.ru/threads/36748-kozynax-emulyator-zx-spectrum-dlya-win-linux-macos-na-net.html.
 
 .. thumbnail:: /images/photo_2026-09-12_17-28-32.jpg
