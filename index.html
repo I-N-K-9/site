@@ -11,7 +11,7 @@
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="ru" href="rss.xml">
 <link rel="canonical" href="https://ink9.ru/">
 <link rel="next" href="index-1.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5shiv-printshiv.min.js"></script><![endif]--><link rel="prefetch" href="posts/2026-09-12/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5shiv-printshiv.min.js"></script><![endif]--><link rel="prefetch" href="posts/2026-10-06/" type="text/html">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -63,7 +63,26 @@
     
 
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2026-09-12/" class="u-url">Kozynax - эмулятор ZX Spectrum для Win/Linux/MacOS на .NET</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2026-10-06/" class="u-url">Великий день для эмуляции Z80!</a></h1>
+        <div class="metadata">
+            <p class="dateline">
+                <time class="published dt-published" datetime="2026-10-06T16:14:29Z" itemprop="datePublished" title="2026-10-06 16:14">2026-10-06 16:14</time></p>
+                <p class="commentline">    
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <p>Андрей Титов (Dr. Titus) закончил перевод потранзисторной схемы Z80 (которую, в свою очередь, когда-то получили декапом кристалла кислотой и ручной обработкой фотографий с микроскопа) в понятную схему логических элементов. Тут важно даже не то, что она понятна нам (мало кто за завтраком будет читать схему процессора), а то, что она хорошо укладывается в логические ячейки FPGA. Сейчас стал возможен 100%-точный аналог реального Z80. Ну может не 100%, если внутри происходят какие-то паразитные аналоговые процессы, которые в FPGA может не получиться повторить, но все-таки на фоне того, что было до этого — это огромный скачок.</p>
+<p>Что было до этого — это процессорные ядра, которые занимались не повторением, а эмуляцией Z80. Вообще, есть такой аргумент за FPGA-клоны, что это, дескать, не эмуляторы, а ТА ЖЕ САМАЯ СХЕМА, просто перенесенная в FPGA. А вот нифига! Сама схема условного Пентагона там действительно поэлементно та же самая. Но вот процессорное ядро только лишь внешне, для программ, выглядит как Z80. Внутри там полная отсебятина. Написанная с учетом всего, что мы знаем о процессоре, но отсебятина. Если в реальном Z80 вдруг найдется очередная недокументированная багофича (а их найдено множество, начиная от всем известных дополнительных команд для работы с половинками регистров IX/IY, и до хитрых особенностей команд SCF/CCF, реализация которых буквально зависит от производителя процессора), то этого поведения не будет в существующих FPGA-ядрах пока его туда не добавят авторы. А вот поведение полной FPGA-копии процессора будет полностью повторять реальный камень. Опять же, конечно, с оговорками, что речь не про какие-то аналоговые эффекты.</p>
+<p>На картинке авторский пример того, как в кучке транзисторов рассмотреть логический элемент. Всего таких транзисторов в Z80 порядка 8.5 тысяч.</p>
+<p>Новое ядро добровольцы уже прошили в FPGA, запустили, и оно успешно проходит тесты. Судя по теме, работа заняла почти 5 лет. Не фулл-тайм, Титус же за это время успел ещё полностью отреверсить все части Dizzy и массу ещё чего сделать, но масштаб все равно титанический. Хочется поздравить и Андрея с этим успехом, и нас, ведь та самая мифическая "полная точная копия компьютера в FPGA" сегодня стала намного ближе!</p>
+<p>Основная тема тут - <a class="reference external" href="https://zx-pk.ru/threads/34173-revers-inzhiniring-z80/page89.html">https://zx-pk.ru/threads/34173-revers-inzhiniring-z80/page89.html</a>
+Верилог-исходники тут - <a class="reference external" href="https://github.com/dr-Titus/z80-silicon-rtl">https://github.com/dr-Titus/z80-silicon-rtl</a></p>
+<a class="reference external image-reference" href="images/photo_2026-10-06_16-14-29.jpg">
+<img alt="/images/photo_2026-10-06_16-14-29.thumbnail.jpg" src="images/photo_2026-10-06_16-14-29.thumbnail.jpg"></a>
+    </div>
+    </article><hr>
+<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2026-09-12/" class="u-url">Kozynax - эмулятор ZX Spectrum для Win/Linux/MacOS на .NET</a></h1>
         <div class="metadata">
             <p class="dateline">
                 <time class="published dt-published" datetime="2026-09-12T17:28:32Z" itemprop="datePublished" title="2026-09-12 17:28">2026-09-12 17:28</time></p>
@@ -211,20 +230,6 @@
 </div>
     </div>
     </article><hr>
-<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2025-10-23/" class="u-url">"Вот так начнёшь изучать фамильные портреты и, пожалуй, уверуешь в переселение душ"</a></h1>
-        <div class="metadata">
-            <p class="dateline">
-                <time class="published dt-published" datetime="2025-10-23T12:41:53Z" itemprop="datePublished" title="2025-10-23 12:41">2025-10-23 12:41</time></p>
-                <p class="commentline">    
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <p>Блок питания-то от Магика (и Кворума), оказывается, скопирован с БП от амстрадовского ZX Spectrum +2A/B 😳</p>
-<a class="reference external image-reference" href="images/photo_2025-10-23_12-41-53.jpg">
-<img alt="/images/photo_2025-10-23_12-41-53.thumbnail.jpg" src="images/photo_2025-10-23_12-41-53.thumbnail.jpg"></a>
-    </div>
-    </article><hr>
 </div>
 
     <nav aria-label="Page navigation"><ul class="pagination">
@@ -236,7 +241,7 @@
       <li class="page-item "><a href="index-4.html" class="page-link">5</a></li>
       <li class="page-item "><a href="index-5.html" class="page-link">6</a></li>
       <li class="page-item disabled"><a href="#" class="page-link" aria-label="…"><span aria-hidden="true">…</span></a></li>
-      <li class="page-item "><a href="index-16.html" class="page-link">17</a></li>
+      <li class="page-item "><a href="index-17.html" class="page-link">18</a></li>
       <li class="page-item"><a href="index-1.html" class="page-link" aria-label="Старые записи"><span aria-hidden="true">»</span></a></li>
   </ul></nav>
 </div>

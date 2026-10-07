@@ -63,7 +63,20 @@
     
 
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2020-09-30/" class="u-url">Бетадиск для ZX48 готов</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2020-10-10/" class="u-url">Пистолет для Денди и ЖК</a></h1>
+        <div class="metadata">
+            <p class="dateline">
+                <time class="published dt-published" datetime="2020-10-10T20:17:18+05:00" itemprop="datePublished" title="2020-10-10 20:17">2020-10-10 20:17</time></p>
+                <p class="commentline">    
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <p>2020 начинает исправляться! Я несколько лет назад тоже экспериментировал с пистолетом и эмулятором. Добился работоспособности, но уж очень нестабильной. Решил, что проблема в том, что ЖК экран в силу конструкции излучает свет даже окрашенными в черный участками, поэтому разница в яркости между черным и белым цветом недостаточна для уверенного распознавания. Но, возможно, дело было просто в низкой чувствительности АЦП ардуины. У STM32 она на два порядка лучше.</p>
+<p><a class="reference external" href="https://www.instagram.com/p/CGKlfoypVug/">https://www.instagram.com/p/CGKlfoypVug/</a></p>
+    </div>
+    </article><hr>
+<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2020-09-30/" class="u-url">Бетадиск для ZX48 готов</a></h1>
         <div class="metadata">
             <p class="dateline">
                 <time class="published dt-published" datetime="2020-09-30T00:01:15+05:00" itemprop="datePublished" title="2020-09-30 00:01">2020-09-30 00:01</time></p>
@@ -210,24 +223,6 @@ RET
 <img alt="/images/photo_16@01-08-2020_21-56-09.thumbnail.jpg" src="images/photo_16@01-08-2020_21-56-09.thumbnail.jpg"></a>
     </div>
     </article><hr>
-<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/2020-05-18/" class="u-url">Кабинет Nintendo M82</a></h1>
-        <div class="metadata">
-            <p class="dateline">
-                <time class="published dt-published" datetime="2020-05-18T15:03:26+05:00" itemprop="datePublished" title="2020-05-18 15:03">2020-05-18 15:03</time></p>
-                <p class="commentline">    
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <p>Nintendo M82 — это демонстрационное устройство, основанное на приставке NES. Поставлялось в магазины и устанавливалось в их торговых залах для того, чтобы потенциальные покупатели NES могли поиграть в игры и убедиться, что приставка им действительно нужна. Имеет 12 (!) слотов под картриджи.</p>
-<p>Забавно, что M82 был выпущен очень рано - одновременно с самой NES - поэтому некоторые фичи поздних мапперов (среди которых даже гиперпопулярный MMC3) в нем не поддерживаются. Причина аппаратная - сигнал IRQ (прерывание) просто не заведен на разъемы для картриджей, из-за этого в играх не работает скроллинг фона. Какая связь между прерыванием и скроллингом? А примерно такая же, какая между прерыванием и мультиколором на Спектруме. Обычно на NES фон можно скроллить только весь целиком. Но маппер MMC3 умеет (анализируя шину адреса видеопроцессора) генерировать прерывание тогда, когда луч заканчивает отрисовку очередной строки. И если дать части экрана отрисоваться, а после этого перепрограммировать графический процессор на другую скорость скроллинга, то мы сможем создать, например, эффект параллакса, когда дальний фон скроллится медленней, чем ближний. Без умного маппера подобная синхронизация делается гораздо сложней.</p>
-<p>В этом видео Бен Хек (Ben Hack) ремонтирует одно из таких устройств, чинит видеовыход и возвращает IRQ на место.</p>
-<p><a class="reference external" href="https://www.youtube.com/watch?v=yZEzioQP4W8">https://www.youtube.com/watch?v=yZEzioQP4W8</a></p>
-<div class="youtube-video">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/yZEzioQP4W8?rel=0&amp;wmode=transparent" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
-</div>
-    </div>
-    </article><hr>
 </div>
 
     <nav aria-label="Page navigation"><ul class="pagination">
@@ -242,6 +237,7 @@ RET
       <li class="page-item active"><a href="#" class="page-link">15 <span class="sr-only">(current)</span></a></li>
       <li class="page-item "><a href="index-15.html" class="page-link">16</a></li>
       <li class="page-item "><a href="index-16.html" class="page-link">17</a></li>
+      <li class="page-item "><a href="index-17.html" class="page-link">18</a></li>
       <li class="page-item"><a href="index-15.html" class="page-link" aria-label="Старые записи"><span aria-hidden="true">»</span></a></li>
   </ul></nav>
 </div>
