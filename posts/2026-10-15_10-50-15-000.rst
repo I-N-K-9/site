@@ -13,4 +13,3 @@
 https://www.youtube.com/watch?v=jiW3P1rJRMc
 
 .. youtube:: jiW3P1rJRMc
-.. thumbnail:: /images/photo_2026-10-15_10-50-15.jpg
