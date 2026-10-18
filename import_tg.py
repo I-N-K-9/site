@@ -22,6 +22,11 @@ from dateutil import tz
 from telethon import TelegramClient, utils
 from telethon.errors import ChannelInvalidError, MessageIdInvalidError
 
+try:
+    import readline
+except ImportError:
+    readline = None
+
 
 # === Настройки ===
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -254,6 +259,15 @@ def pick_title(bundle: PostBundle) -> str:
     return "Telegram import"
 
 
+def sanitize_image_filename(name: str) -> str:
+    """Remove spaces and Telegram album suffixes like ' (1)' from filenames."""
+    stem, ext = os.path.splitext(name)
+    stem = re.sub(r"\s+\((\d+)\)$", r"_\1", stem)
+    stem = re.sub(r"\s+", "_", stem)
+    stem = re.sub(r"_+", "_", stem).strip("_")
+    return f"{stem}{ext}"
+
+
 async def save_message_media(client, msg, channel, msg_id, images_dir):
     saved_files = []
 
@@ -283,7 +297,7 @@ async def save_message_media(client, msg, channel, msg_id, images_dir):
     for p in saved_files:
         if not p:
             continue
-        bname = os.path.basename(p)
+        bname = sanitize_image_filename(os.path.basename(p))
         target = os.path.join(images_dir, bname)
         if os.path.abspath(p) != os.path.abspath(target):
             os.makedirs(images_dir, exist_ok=True)
@@ -476,7 +490,136 @@ def render_body(bundle: PostBundle) -> str:
     return "\n\n".join(parts)
 
 
-def create_rst(nikola_root, bundle: PostBundle, title=None):
+def collect_meta_from_posts(nikola_root):
+    """Collect existing categories and tags from posts/."""
+    posts_dir = os.path.join(nikola_root, POSTS_SUBDIR)
+    categories = set()
+    tags = set()
+    if not os.path.isdir(posts_dir):
+        return [], []
+    for name in os.listdir(posts_dir):
+        if not name.endswith(".rst"):
+            continue
+        path = os.path.join(posts_dir, name)
+        try:
+            with open(path, encoding="utf-8") as f:
+                for line in f:
+                    if line.startswith(".. category:"):
+                        value = line[len(".. category:") :].strip()
+                        if value:
+                            categories.add(value)
+                    elif line.startswith(".. tags:"):
+                        value = line[len(".. tags:") :].strip()
+                        for part in re.split(r"[,;]", value):
+                            part = part.strip()
+                            if part:
+                                tags.add(part)
+        except OSError:
+            continue
+    return sorted(categories), sorted(tags)
+
+
+def input_with_prefill(prompt: str, prefill: str = "") -> str:
+    """Read a line with `prefill` already in the edit buffer (readline)."""
+    if readline is None or not prefill:
+        return input(prompt)
+
+    def _hook():
+        readline.insert_text(prefill)
+        readline.redisplay()
+
+    readline.set_startup_hook(_hook)
+    try:
+        return input(prompt)
+    finally:
+        readline.set_startup_hook()
+
+
+def prompt_title(default: str) -> str:
+    print("\nTitle (edit and press Enter):")
+    entered = input_with_prefill("> ", default).strip()
+    return entered or default
+
+
+def prompt_single_choice(label: str, options: list, default: str = "") -> str:
+    """Ask user to pick one option by number, type a new value, or Enter to keep default/empty."""
+    print(f"\n{label}:")
+    for i, opt in enumerate(options, 1):
+        mark = " *" if opt == default else ""
+        print(f"  {i}. {opt}{mark}")
+    print("  0. (none / clear)")
+    if default:
+        hint = f"Enter = keep '{default}', number, or type new"
+    else:
+        hint = "Enter = none, number, or type new"
+    print(f"({hint})")
+    entered = input("> ").strip()
+    if not entered:
+        return default
+    if entered == "0":
+        return ""
+    if entered.isdigit():
+        idx = int(entered)
+        if 1 <= idx <= len(options):
+            return options[idx - 1]
+        print(f"[!] Invalid number, using '{default or '(none)'}'")
+        return default
+    return entered
+
+
+def prompt_multi_choice(label: str, options: list, defaults: list = None) -> list:
+    """Ask user to pick zero or more options by numbers (e.g. 1,3) or typed names."""
+    defaults = defaults or []
+    print(f"\n{label}:")
+    for i, opt in enumerate(options, 1):
+        mark = " *" if opt in defaults else ""
+        print(f"  {i}. {opt}{mark}")
+    print("  0. (none)")
+    print("(Enter = keep defaults / none, numbers like 1,2, or type new tags comma-separated)")
+    entered = input("> ").strip()
+    if not entered:
+        return list(defaults)
+    if entered == "0":
+        return []
+
+    selected = []
+    for part in re.split(r"[,;]", entered):
+        part = part.strip()
+        if not part:
+            continue
+        if part.isdigit():
+            idx = int(part)
+            if 1 <= idx <= len(options):
+                selected.append(options[idx - 1])
+            else:
+                print(f"[!] Ignoring invalid number: {part}")
+        else:
+            selected.append(part)
+    # preserve order, drop duplicates
+    seen = set()
+    unique = []
+    for t in selected:
+        if t not in seen:
+            seen.add(t)
+            unique.append(t)
+    return unique
+
+
+def prompt_post_meta(nikola_root, bundle: PostBundle):
+    """Interactively edit title / category / tags before writing RST."""
+    categories, tags = collect_meta_from_posts(nikola_root)
+    default_title = pick_title(bundle)
+    default_category = "Repost" if bundle.is_repost else ""
+    if default_category and default_category not in categories:
+        categories = sorted(set(categories) | {default_category})
+
+    title = prompt_title(default_title)
+    category = prompt_single_choice("Category", categories, default=default_category)
+    chosen_tags = prompt_multi_choice("Tags", tags)
+    return title, category, chosen_tags
+
+
+def create_rst(nikola_root, bundle: PostBundle, title=None, category=None, tags=None):
     posts_dir = os.path.join(nikola_root, POSTS_SUBDIR)
     images_sub = IMAGES_SUBDIR
     os.makedirs(posts_dir, exist_ok=True)
@@ -484,18 +627,23 @@ def create_rst(nikola_root, bundle: PostBundle, title=None):
     fname = filename_from_dt(bundle.dt)
     fullpath = os.path.join(posts_dir, fname)
     date_header = format_date_for_header(bundle.dt)
-    category = "Repost" if bundle.is_repost else ""
+    if category is None:
+        category = "Repost" if bundle.is_repost else ""
     title = title or pick_title(bundle)
+    tags = tags or []
+    tags_header = ", ".join(tags) if tags else ""
     body = render_body(bundle)
 
+    tags_line = f".. tags: {tags_header}" if tags_header else ".. tags:"
+    category_line = f".. category: {category}" if category else ".. category:"
     lines = [
         f".. title: {title}",
         f".. slug: {bundle.dt.strftime('%Y-%m-%d')}",
         f".. date: {date_header}",
-        f".. tags:",
-        f".. category: {category}",
-        f".. description:",
-        f".. type: text",
+        tags_line,
+        category_line,
+        ".. description:",
+        ".. type: text",
         "",
     ]
 
@@ -599,8 +747,14 @@ async def main(argv):
     if bundle.is_repost:
         print("[i] Detected repost")
 
-    rst_path = create_rst(NIKOLA_ROOT, bundle)
+    title, category, tags = prompt_post_meta(NIKOLA_ROOT, bundle)
+    rst_path = create_rst(
+        NIKOLA_ROOT, bundle, title=title, category=category, tags=tags
+    )
     print(f"[+] RST saved: {rst_path}")
+    print(f"    title: {title}")
+    print(f"    category: {category or '(none)'}")
+    print(f"    tags: {', '.join(tags) if tags else '(none)'}")
 
     all_media = list(bundle.comment_media)
     for source in bundle.sources:
